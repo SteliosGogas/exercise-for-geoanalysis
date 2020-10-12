@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+<h1>Please complete all the fields</h1>
+<form method = "POST" action="{{ url_for('form') }}">
+	{{form.csrf_token }}
+	{{form.name.label}}
+	{{form.name}}
+	<u1>
+	{% for error in form.name.errors %}
+		<li style="color: red">{{error}}</li>
+	{% endfor %}
+	</u1>
+    {{form.lot.label}}
+	{{form.lot}}
+	<u1>
+	{% for error in form.lot.errors %}
+		<li style="color: red">{{error}}</li>
+	{% endfor %}
+	</u1>
+	{{form.lan.label}}
+	{{form.lan}}
+	<u1>
+	{% for error in form.lan.errors %}
+		<li style="color: red">{{error}}</li>
+	{% endfor %}
+	</u1>
+	<input type="Submit" value="Submit" >
+</form>
+
+</body>
+</html>

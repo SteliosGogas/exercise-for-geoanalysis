@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+        <form method="post" action="/views">
+        </form>
+        {% for mydata in data %}
+            <table>{{ mydata.name }}  {{mydata.lot}}  {{mydata.lan}}</table>
+        {% endfor %}}
+</body>
+</html>
